@@ -8,19 +8,19 @@ int stack[10];
 int top=-1;
 void main()
 {
- int ch,i,item;
+ int ch,i,element;
  clrscr();
  while(1)
  {
-  printf("Choose one \n1.Push\n2.Pop\n3.Display\n4.Exit\n");
+  printf("Select one of the option \n1.Push\n2.Pop\n3.Display\n4.Exit\n");
   scanf("%d",&ch);
   switch(ch)
   {
-   case 1:printf("Enter the item");
-   scanf("%d",&item);
-   push(item);
+   case 1:printf("Enter the element");
+   scanf("%d",&element);
+   push(element);
    break;
-   case 2:printf("Popped item is %d\t",pop());
+   case 2:printf("Popped element is %d\t",pop());
    break;
    case 3:display();
    break;
@@ -28,14 +28,14 @@ void main()
   }
  }
 }
-void push(int item)
+void push(int element)
 {
  if(top==9)
  printf("Stack overflow");
  else
  {
   top++;
-  stack[top]=item;
+  stack[top]=element;
  }
 }
 int pop()
